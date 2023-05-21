@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href=".//assets/styles.css">
+    <title>Notes App.</title>
+</head>
+
+<body>
+
+    <header class="Primary-Header">
+        <h1>Notes App.</h1>
+        <nav class="Primary-Navbar">
+            <img class="Primary-Nav-Link" src="./assets/images/add.png" alt="ADD-ICON">
+            
+
+        </nav>
+    </header>
+    <section class="Main-content">
+
+        <ul class="Pendin-Notes">
+            <h1>Existing Notes</h1>
+
+            <li class="Pending-Notes-Link">This is the first task
+                <img class="Pending-Notes-Link-Delete" src="./assets/images/trash.png" alt="DELETE-ICON">
+            </li>
+            <li class="Pending-Notes-Link">This is the second task
+                <img class="Pending-Notes-Link-Delete" src="./assets/images/trash.png" alt="DELETE-ICON">
+            </li>
+
+        </ul>
+        <aside class="Add-Note-Form">
+            <h2>Add Note Title</h2>
+            <form class="Add-Note-Form-Input">
+                <textarea class="Add-Note-Form-Input-Text"   rows="4" cols="60" placeholder="Add Note Title"></textarea>
+
+            </form>
+            <h3> Add Note Text</h3>
+            <form class="Add-Note-Form-Input">
+                <textarea class="Add-Note-Form-Input-Text" rows="10" cols="60" placeholder="Add Note Text"></textarea>
+                <img class="Primary-Nav-Link-None" src="./assets/images/save.png" alt="SAVE-ICON">
+            </form>
+          
+
+        </aside>
+    </section>
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
