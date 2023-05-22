@@ -180,7 +180,7 @@ body {
         font-family:"poppins";
         font-weight:200;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
     color: black;
     margin-inline: 15%;
@@ -210,6 +210,7 @@ body {
     padding: 15px;
     list-style: decimal;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .Add-Note-Form {

@@ -9,6 +9,9 @@ router.get("/api/notes",(req,res)=>{
 
 })
 
+router.get("/api/notes/:id",(req,res)=>{
+  res.sendFile(path.join(__dirname,"../db/db.json"));
+})
 
 router.post("/api/notes", (req, res) => {
     console.log(req.body);
