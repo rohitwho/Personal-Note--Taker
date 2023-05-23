@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
     <link rel="stylesheet" href=".//assets/styles.css">
     <title>Notes App.</title>
 </head>
@@ -15,30 +17,69 @@
     <header class="Primary-Header">
         <h1>Notes App.</h1>
         <nav class="Primary-Navbar">
-            <img class="Primary-Nav-Link" src="./assets/images/add.png"  alt="ADD-ICON">
-            
+            <img class="Primary-Nav-Link" src="./assets/images/add.png" alt="ADD-ICON">
+
 
         </nav>
     </header>
-    <section class="Main-content">
-       
-        <ul class="Pendin-Notes"></ul>
 
-      
+    <aside class="Question-Mark">
+        <img class="Confused-Guy" src="./assets/images/problem.png" alt="Confused Guy">
+    </aside>
+    <dialog data-modal class="modal">
+
+        <div class="Dialog-Content">
+            <ul>
+                <li class="Pending-Notes-Link-modal"> In order to start click the Add button on the top right corner .
+                    <img class="Pending-Notes-Link-Delete" src="./assets/images/add.png" alt="DELETE-ICON">
+                </li>
+                <li class="Pending-Notes-Link-modal">Click on the Save button below the text section. In order to save
+                    your Note.
+                    <img class="Pending-Notes-Link-Delete" src="./assets/images/save.png" alt="DELETE-ICON">
+                </li>
+                <li class="Pending-Notes-Link-modal">If you wish to Mark as Done/Delete any Existing Note . Just simply
+                    press this icon.
+                    <img class="Pending-Notes-Link-Delete" src="./assets/images/trash.png" alt="DELETE-ICON">
+                </li>
+                <li class="Pending-Notes-Link-modal">If you wanna view Your Note. Just simply click on it and will pop
+                    up the right hand side.
+
+                </li>
+
+            </ul>
+            <button class="Got-it">Got It 🤌</button>
+
+
+
+        </div>
+    </dialog>
+
+    <section class="Main-content">
+
+        <ul class="Pendin-Notes"> </ul>
+
+
+
+
+
+
         <aside class="Add-Note-Form">
-            <h2 class = "Notes-Title"> Note Title</h2>
+            <h2 class="Notes-Title"> Note Title</h2>
             <form class="Add-Note-Form-Input">
-                <textarea class="Add-Note-Form-Input-Text" id ="title"  rows="4" cols="60" placeholder="Add Note Title"> </textarea>
+                <textarea class="Add-Note-Form-Input-Text-Text" id="title" rows="2" cols="10"
+                    placeholder="Add Note Title"> </textarea>
 
             </form>
             <h3 class="Notes-Text"> Note Text</h3>
             <form class="Add-Note-Form-Input-Textarea">
-                <textarea class="Add-Note-Form-Input-Text"  id ="text"rows="10" cols="60" placeholder="Add Note Text"></textarea>
-                <img class="Primary-Nav-Link-None"  src="./assets/images/save.png" alt="SAVE-ICON">
+                <textarea class="Add-Note-Form-Input-Text" id="text" rows="8" cols="60"
+                    placeholder="Add Note Text"></textarea>
+                <img class="Primary-Nav-Link-None" src="./assets/images/save.png" alt="SAVE-ICON">
             </form>
-          
+
 
         </aside>
+
     </section>
     <script src="./assets/index.js"></script>
 </body>

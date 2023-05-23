@@ -1,0 +1,5 @@
+{
+    "css.format.enable": true,
+    "prettier.configPath": "{   \"editor.defaultFormatter\": \"esbenp.prettier-vscode\",   \"[javascript]\": {     \"editor.formatOnSave\": true   },   \"[html]\": {     \"editor.formatOnSave\": true   },   \"[css]\": {     \"editor.formatOnSave\": true   },   \"prettier.trailingComma\": \"none\",   \"prettier.singleQuote\": true,   \"prettier.tabWidth\": 2,   \"prettier.semi\": true }",
+    "prettier.htmlWhitespaceSensitivity": "strict"
+}

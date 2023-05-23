@@ -75,25 +75,34 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
 }
+
 body {
     background-color: #F2AA4CFF;
-    font-family:"poppins";
+
+    font-family: "poppins";
 }
+
 /* Index Content */
-.Wrapper{
-     background-color: hsl(206, 100%, 71%);
-     height: 100vh;
-     font-family:"poppins";
+.Wrapper {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: hsl(206, 100%, 71%);
+    height: 100vh;
+    /* font-family:"poppins"; */
 }
 
 .container {
-    
+
     display: flex;
-    padding:1rem;
+    padding: 6rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-inline: 10%;
+
 
 }
 
@@ -105,8 +114,8 @@ body {
 
     margin: 10px;
     background: transparent;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid rgb(15, 15, 15);
+    color: rgb(15, 15, 15);
     padding: 10px 30px;
     border-radius: 4px;
     cursor: pointer;
@@ -136,16 +145,64 @@ body {
 
 }
 
- .Heading {
+.Heading {
     font-size: 5rem;
     font-weight: 200;
 }
-.content{
-    padding:8px;
+
+.content {
+    padding: 2rem;
     font-size: 1.5rem;
+
 }
+
 /* Notes CONTENT */
 
+dialog::backdrop {
+    background-color: rgba(63, 62, 62, 0.6);
+}
+
+.modal {
+    background-color: #101820FF;
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.Got-it {
+
+    margin: 10px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Question-Mark {
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.Confused-Guy {
+    aspect-ratio: 1;
+    width: 6rem;
+    cursor: pointer;
+
+}
+
+.Pending-Notes-Link-modal {
+    border-bottom: inset;
+    padding: 0.2em;
+    list-style: circle;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
 
 .Primary-Header {
     display: flex;
@@ -163,10 +220,14 @@ body {
     display: inline;
     aspect-ratio: 1;
     width: 4rem;
-    padding: 10px;
+    padding: 0.6rem;
     flex-direction: row-reverse;
     cursor: pointer;
 }
+
+/* .Primary-Nav-Link:hover{ */
+
+
 
 .Primary-Nav-Link-None {
     display: inline;
@@ -177,58 +238,96 @@ body {
 }
 
 .Main-content {
-        font-family:"poppins";
-        font-weight:200;
+
+    font-weight: 200;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1rem;
     color: black;
     margin-inline: 15%;
-}
-
-.Pending-Notes-Link-Delete {
-    display: inline-flex;
-    aspect-ratio: 1;
-    width: 2.7rem;
-    cursor: pointer;
-
 
 }
+
 
 .Pendin-Notes {
-    display: inline-flex;
-    width: fit-content;
-    height: fit-content;
-
+    display: flex;
+    width: 50%;
     border-right: inset;
     flex-direction: column;
 
 }
 
 .Pending-Notes-Link {
+    margin-inline: 1rem;
     border-bottom: inset;
-    padding: 15px;
+    padding: 0.2em;
     list-style: decimal;
     font-size: 1.5rem;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 300;
 }
+
+.Pending-Notes-Link-Delete {
+    display: inline-flex;
+    aspect-ratio: 1;
+    width: 2.4rem;
+    margin-left: 4rem;
+    border-color: #101820FF;
+    cursor: pointer;
+
+}
+
+.Pending-Notes-Link-Delete:hover {
+
+    transform: translateX(0);
+    transition: transform 0.9s linear;
+}
+
+.Pending-Notes-Link-Delete:hover {
+    transform: translateX(-8px);
+}
+
+.Pending-Notes-Link-Delete:hover:hover {
+    transform: translateX(8px);
+}
+
+
 
 .Add-Note-Form {
     display: inline-block;
     width: fit-content;
     height: fit-content;
+    margin-inline: 10%;
 
 }
-.Add-Note-Form-Input-Text{
+
+.Add-Note-Form-Input-Text {
     width: 100%;
     height: fit-content;
     background: transparent;
-    border-color: white;
-    border-radius: 10px;
+    border: 2px solid black;
+    border-radius: 10px 10px 90px;
+    font-size: 1rem;
+    font-weight: 300;
+
 }
+
+.Add-Note-Form-Input-Text-Text {
+    width: 60%;
+    height: fit-content;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px 10px 90px;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+
 h1,
 h2,
 h3 {
     font-weight: 300;
     font-size: 2rem;
+
 }
