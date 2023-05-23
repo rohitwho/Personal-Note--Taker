@@ -4,15 +4,24 @@ const path = require("path");
 const express = require("express");
 const router = express.Router();
 
+
+//----------Getting the existing data from db-----------------------//
+
 router.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "../db/db.json"));
 
 })
+//---------------------------------//
+
+//---------getting the requested data by looking the id----------------------//
 
 router.get("/api/notes/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "../db/db.json"));
 })
+//---------------------------------//
 
+
+//--------Posting the user input-------------------------//
 router.post("/api/notes", (req, res) => {
   console.log(req.body);
   const dbFilePath = path.join(__dirname, '..', 'db', 'db.json');
@@ -34,6 +43,11 @@ router.post("/api/notes", (req, res) => {
   // Respond to the client with a success message or appropriate status code
   res.status(200).json({ message: 'Note added successfully' });
 });
+//---------------------------------//
+
+
+
+//------------deleting the notes as requested---------------------//
 
 
 router.delete("/api/notes/:id", (req, res) => {
@@ -67,7 +81,7 @@ router.delete("/api/notes/:id", (req, res) => {
     });
   });
 });
-
+//---------------------------------//
 
 module.exports = router
 

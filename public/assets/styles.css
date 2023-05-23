@@ -88,10 +88,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
     background-color: hsl(206, 100%, 71%);
     height: 100vh;
-    /* font-family:"poppins"; */
+
 }
 
 .container {
@@ -111,7 +110,6 @@ body {
 
     text-decoration: none;
     transition: ease-in-out 600ms;
-
     margin: 10px;
     background: transparent;
     border: 1px solid rgb(15, 15, 15);
@@ -167,6 +165,13 @@ dialog::backdrop {
     color: white;
     border-radius: 1rem;
     padding: 2rem;
+}
+
+.Button-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .Got-it {
@@ -225,7 +230,7 @@ dialog::backdrop {
     cursor: pointer;
 }
 
-/* .Primary-Nav-Link:hover{ */
+
 
 
 
@@ -244,7 +249,8 @@ dialog::backdrop {
     justify-content: space-evenly;
     padding: 1rem;
     color: black;
-    margin-inline: 15%;
+    margin-inline: 10%;
+    /* border:1px solid black; */
 
 }
 
@@ -271,9 +277,8 @@ dialog::backdrop {
 .Pending-Notes-Link-Delete {
     display: inline-flex;
     aspect-ratio: 1;
-    width: 2.4rem;
-    margin-left: 4rem;
-    border-color: #101820FF;
+    width: 2rem;
+    margin-left: 1rem;
     cursor: pointer;
 
 }
@@ -288,7 +293,7 @@ dialog::backdrop {
     transform: translateX(-8px);
 }
 
-.Pending-Notes-Link-Delete:hover:hover {
+.Pending-Notes-Link-Delete:hover {
     transform: translateX(8px);
 }
 
@@ -330,4 +335,33 @@ h3 {
     font-weight: 300;
     font-size: 2rem;
 
+}
+
+
+@media screen and (max-width: 800px) {
+
+    html {
+        font-size: 90%;
+    }
+
+    .Main-content {
+        margin-inline: 2%;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .Pending-Notes-Link-Delete {
+        width: 1.3rem;
+        display: block;
+    }
+
+    .Notes-Title {
+        margin: 1rem;
+        padding: 0.8rem;
+    }
+
+    .Notes-Text {
+        padding: 0.8rem;
+
+    }
 }

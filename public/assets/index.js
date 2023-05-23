@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
+//---------- Modal Content----------//
   const show = document.querySelector(".Confused-Guy");
   const modal = document.querySelector(".modal")
   const closeModal = document.querySelector(".Got-it")
@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   closeModal.addEventListener("click", function () {
     modal.close();
   })
+//---------------------------------//
 
-
-
+//--Getting Notes from db and displaying as a li element----------//
   async function getNotes() {
     try {
       const response = await fetch("/api/notes", {
@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+//---------------------------------//
 
-
-
+//------- Pulling the note id and deleating the notes on request---------//
   function delEntry(id) {
     return fetch(`/api/notes/${id}`, {
       method: 'DELETE',
@@ -66,6 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
+
+
+
+  
+  function removeNote(id, liElement) {
+    delEntry(id)
+      .then(() => {
+        // Delete the corresponding list item from the UI
+        liElement.remove();
+      })
+      .catch((error) => {
+        console.error('Error deleting note:', error);
+      });
+
+
+
+
+  }
+//---------------------------------//
+
+
+//------Getting the note with the unique id and displaying them on the right side. --------//
+
   async function showEntry(id) {
     try {
       const response = await fetch(`/api/notes`, {
@@ -127,23 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error in GET request:', error);
     }
   }
+//---------------------------------//
 
 
 
-  function removeNote(id, liElement) {
-    delEntry(id)
-      .then(() => {
-        // Delete the corresponding list item from the UI
-        liElement.remove();
-      })
-      .catch((error) => {
-        console.error('Error deleting note:', error);
-      });
+//----------Clearing the note section -------------//
 
 
-
-
-  }
   let clear = document.querySelector(".Primary-Nav-Link").addEventListener("click", createNote);
 
   function createNote(e) {
@@ -151,7 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
     location.reload();
   }
 
+//---------------------------------//
 
+
+
+//----------take user input and post it to db.-----------------------//
 
   function newNote() {
 
@@ -181,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error in POST request:', error);
       });
   }
-
+//---------------------------------//
   const save = document.querySelector(".Primary-Nav-Link-None");
 
   save.addEventListener("click", () => {
