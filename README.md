@@ -20,11 +20,14 @@ This Project will allow Consumer to Write, Save ,Organize and keep track the tas
 * [Testing](#testing)
 * [Questions](#questions)
 
-## Screenshot
+
+## Video Link
+https://drive.google.com/file/d/1-0PdDKCZpVn09kR8VcQL5NvnBk6C-Guy/view
 
 
 ## Installation
- 
+## Screensho![screencapture-localhost-3001-2023-05-22-22_02_48](https://github.com/rohitwho/Personal-Note--Taker/assets/123782523/e0bc6398-06e6-47a0-8d26-402f0705a900)
+t
 
 ## Features
 
