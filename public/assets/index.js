@@ -15,7 +15,7 @@
   closeModal.addEventListener("click", function () {
     modal.close();
   })
-//---------------------------------//
+
 
 //--Getting Notes from db and displaying as a li element----------//
   async function getNotes() {
@@ -55,7 +55,7 @@
     }
   }
 
-//---------------------------------//
+
 
 //------- Pulling the note id and deleating the notes on request---------//
   function delEntry(id) {
@@ -85,7 +85,7 @@
 
 
   }
-//---------------------------------//
+
 
 
 //------Getting the note with the unique id and displaying them on the right side. --------//
@@ -151,7 +151,7 @@
       console.error('Error in GET request:', error);
     }
   }
-//---------------------------------//
+
 
 
 
@@ -165,7 +165,7 @@
     location.reload();
   }
 
-//---------------------------------//
+
 
 
 
@@ -199,7 +199,7 @@
         console.error('Error in POST request:', error);
       });
   }
-//---------------------------------//
+
   const save = document.querySelector(".Primary-Nav-Link-None");
 
   save.addEventListener("click", () => {

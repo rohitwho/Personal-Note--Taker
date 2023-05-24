@@ -11,14 +11,14 @@ router.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "../db/db.json"));
 
 })
-//---------------------------------//
+
 
 //---------getting the requested data by looking the id----------------------//
 
 router.get("/api/notes/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "../db/db.json"));
 })
-//---------------------------------//
+
 
 
 //--------Posting the user input-------------------------//
@@ -43,7 +43,7 @@ router.post("/api/notes", (req, res) => {
   // Respond to the client with a success message or appropriate status code
   res.status(200).json({ message: 'Note added successfully' });
 });
-//---------------------------------//
+
 
 
 
@@ -81,7 +81,7 @@ router.delete("/api/notes/:id", (req, res) => {
     });
   });
 });
-//---------------------------------//
+
 
 module.exports = router
 
