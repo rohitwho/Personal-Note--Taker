@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', () => {
+
 //---------- Modal Content----------//
   const show = document.querySelector(".Confused-Guy");
   const modal = document.querySelector(".modal")
@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(() => {
         // Delete the corresponding list item from the UI
         liElement.remove();
+        document.location.reload();
       })
       .catch((error) => {
         console.error('Error deleting note:', error);
@@ -140,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectText.style.border = "2px solid";
         selectText.style.borderRadius = "10px 10px 90px";
 
-
+      
 
 
       } else {
@@ -205,6 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
     newNote();
   });
   getNotes()
-});
+
 
 
